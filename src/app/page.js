@@ -1,58 +1,43 @@
-import Image from 'next/image';
-import './about/page';
-import Link from 'next/link';
-
-export default function Home() {
+import Link from "next/link";
+import Image from "next/image";
+export default function ComponentName() {
   return (
-    <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-      <h1> Hello World</h1>
-      <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
+    <div className="w-screen h-screen px-8 py-8">
+      <div className="flex flex-row p-2 ">
+        <div className="rounded-full w-16 h-16 mx-5">
+          <img
+            src="https://i.pravatar.cc/100?img=5"
+            alt="avatar"
+            className="rounded-full "
           />
-          Learn
-        </a>
-        <Link
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='/about'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/window.svg'
-            alt='Window icon'
-            width={16}
-            height={16}
+        </div>
+        <div className="relative h-4 w-44 overflow-hidden rounded">
+          <div className="absolute inset-y-0 left-0 flex items-center h-full pl-1 pointer-events-none">
+            <svg
+              className="w-3 h-3 text-slate-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="search"
+            className="block px-4 pl-5 text-xs text-slate-400 border border-slate-900 rounded bg-slate-700 outline-none box-border h-full w-full flex-1"
+            placeholder="Search for a city"
           />
-          About Us
-        </Link>
-        <Link
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='/dashboard'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/globe.svg'
-            alt='Globe icon'
-            width={16}
-            height={16}
-          />
-          Dashboard ↗
-        </Link>
-      </footer>
+        </div>
+      </div>
     </div>
   );
 }
+import React from "react";
