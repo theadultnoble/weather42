@@ -17,11 +17,20 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-notosans);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.lato-light {
+  font-family: var(--font-lato);
+  font-weight: 300;
+}
+
+.lato-bold {
+  font-family: var(--font-lato);
+  font-weight: 400;
 }
